@@ -1,5 +1,5 @@
 body {
-    background-color: #222;
+    background-color: #ddd;
     margin: 0;
     padding: 0;
     font-family: "Glacial Indifference";
@@ -12,7 +12,7 @@ body {
 
 }
 
-.svg {
+i {
     margin-right: 6px;
 
 }

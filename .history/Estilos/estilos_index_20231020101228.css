@@ -1,5 +1,5 @@
 body {
-    background-color: #222;
+    background-color: #333;
     margin: 0;
     padding: 0;
     font-family: "Glacial Indifference";
@@ -12,23 +12,16 @@ body {
 
 }
 
-.svg {
+i{
     margin-right: 6px;
-
 }
-
-.boton-nav {
-    font-size: 1.4vw;
-}
-
 .header {
     background-color: #FEA500;
     text-align: left;
     display: flex;
     align-items: center;
     height: 16vw;
-    margin: 10px;
-    padding: 10px;
+    margin: 5px;
     border-radius: 30px;
     border: solid 3px #4D9906;
 }
@@ -65,8 +58,7 @@ h2 {
     color: black;
     padding: 0px;
     height: auto;
-    border: 3px solid #4D9906;
-    border-radius: 10px;
+    border: ;
 }
 
 .menu {
@@ -88,7 +80,7 @@ h2 {
     left: 0;
     text-decoration: none;
     background-color: #FEA500;
-    border: 1px solid #222;
+    border: 1px solid #333;
     border-radius: 0 0 5px 5px;
     padding: 5px 0;
     list-style: none;
@@ -104,7 +96,7 @@ h2 {
 }
 
 .submenu li a {
-    color: #222;
+    color: #333;
     padding: 5px 15px;
     text-decoration: none;
     display: block;
@@ -112,12 +104,12 @@ h2 {
 }
 
 .submenu li a:hover {
-    background-color: #222;
+    background-color: #333;
     color: white;
 }
 
 main {
-
+    
     text-align: center;
     padding: 20px 0;
     height: 300px;
@@ -137,7 +129,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-top: #4D9906 solid 3px;
+    border-top: #333 solid 2px;
     text-align: center;
     padding: 1.5vw;
 }

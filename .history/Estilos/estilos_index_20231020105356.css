@@ -12,12 +12,11 @@ body {
 
 }
 
-.svg {
+i {
     margin-right: 6px;
-
 }
 
-.boton-nav {
+#boton-nav {
     font-size: 1.4vw;
 }
 
