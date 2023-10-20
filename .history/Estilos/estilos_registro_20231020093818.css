@@ -47,7 +47,7 @@ margin-right: 850px;
     }
 
 
-    @font-face {
-    font-family: "Glacial Indifference";
-    src: url("../Sources/GlacialIndifference-Regular.otf");
-}
+        @font-face {
+            font-family: "Glacial Indifference";
+            src: url("../Sources/GlacialIndifference-Regular.otf");
+        }

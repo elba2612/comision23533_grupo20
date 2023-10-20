@@ -22,15 +22,14 @@ body {
 
 h1 {
     font-weight: 400;
-    font-size: 6vw;
+    font-size: 7vw;
     margin: auto;
     margin-left: 20px;
 }
 
 h2 {
     font-weight: 300;
-    font-size: 3.5vw;
-    margin: 10px 0;
+    font-size: 1.8vw;
 }
 
 
@@ -46,6 +45,11 @@ h2 {
 
 
 
+h2 {
+    font-size: 50px;
+    margin: 10px 0;
+
+}
 
 .nav {
     background-color: darkorange;

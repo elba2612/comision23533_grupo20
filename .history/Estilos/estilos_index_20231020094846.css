@@ -19,23 +19,18 @@ body {
     align-items: center;
     height: 18vw;
 }
-
-h1 {
+h1{
     font-weight: 400;
-    font-size: 6vw;
-    margin: auto;
-    margin-left: 20px;
+    font-size: 2vw;
 }
-
-h2 {
+h2{
     font-weight: 300;
-    font-size: 3.5vw;
-    margin: 10px 0;
+    font-size: 1.8vw;
 }
 
 
 .logo {
-    width: 18vw;
+    width: 10vw;
     margin-right: 10px;
 }
 
@@ -44,8 +39,18 @@ h2 {
     flex-direction: column;
 }
 
+h1 {
+    font-size: 80px;
+    margin: auto;
+    margin-left: 20px;
 
+}
 
+h2 {
+    font-size: 50px;
+    margin: 10px 0;
+
+}
 
 .nav {
     background-color: darkorange;
@@ -111,8 +116,7 @@ main {
 .main img {
     max-height: 300px;
     max-width: 100%;
-    border: 3px solid #333;
-    border-radius: 10px;
+    border: #333 2px solid;
 }
 
 footer {

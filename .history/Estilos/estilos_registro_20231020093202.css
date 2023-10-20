@@ -45,9 +45,3 @@ margin-right: 850px;
         text-decoration: none; /* Elimina la decoración de enlace predeterminada */
         margin-left: 10px; /* Añade espacio entre el botón "GUARDAR" y el enlace "VOLVER" */
     }
-
-
-    @font-face {
-    font-family: "Glacial Indifference";
-    src: url("../Sources/GlacialIndifference-Regular.otf");
-}

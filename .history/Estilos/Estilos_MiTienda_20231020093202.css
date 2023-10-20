@@ -1,0 +1,56 @@
+* { margin: 0;
+padding: 0;
+}
+header {margin-bottom: 40px;
+    text-align: center;
+
+}
+body {
+    margin-top: 40px;
+    background-color: darkorange;
+    margin: 20px;
+    padding: 20px;
+}
+
+img {
+    
+    width: 40%;
+
+}
+
+
+@font-face {
+    font-family: "Glacial Indifference";
+    src: url("../Sources/GlacialIndifference-Regular.otf");
+}
+
+.Glacial {
+    font-family: "Glacial Indifference";
+
+}
+
+.logo {
+    width: 150px;
+    height: 150px;
+    margin-left: 0;
+}
+main{ 
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto;
+    width: 80%;
+    height: 400px;
+    margin-top: 40px;
+}
+.item1{
+    grid-column-start: 1 ;
+    grid-column-end: 2;
+    grid-template-rows: auto;
+    
+}
+
+.item3{
+    grid-column-start: 3 ;
+    grid-column-end: 4;
+    grid-template-rows: auto;
+}
