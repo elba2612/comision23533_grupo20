@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,30 +17,30 @@
             </a>
         </div>
         <h1>
-        <h1>
-          INGRESO
-        </h1>
-        
+            <h1>
+                Ingreso
+            </h1>
+
     </header>
-    <MAIN>
+    <main>
         <form action="achivodeprocesamiento.php" method="post">
-            <label> 
-                <div class="form-grupos">
-                    <h2>Nombre de Usuario</h2>
-                    <input type="text" name="Nombre" required>
+            <section class="form-grupos">
+                <label for="nombre">Nombre de Usuario:</label>
+                <input type="text" name="nombre" id="nombre" required>
+            </section>
+            <section class="form-grupos">
+                <label>Contraseña:</label>
+                <input type="password" name="pass" id="nombre" required>
+                <div id="check-recuerdame">
+                    <input type="checkbox" name="recordarme" id="recordarme">
+                    <label for="recordarme" id="recuerdame">Recuérdame</label>
                 </div>
-                <div class="form-grupos">
-                    <h2>Contraseña de usuario: </h2>
-                    <input type="password" name="pass" required>
-                </div>
-                
-                <div class="form-buttons">
-                    <input type="submit" value="GUARDAR">
-                    
-                </div>
-        
-    
-    
-    </MAIN>
+                <a id="olvidaste" href="#">Olvidaste tu contraseña?</a>
+            </section>
+            <section class="form-buttons">
+                <input type="submit" value="Enviar">
+            </section>
+    </main>
 </body>
+
 </html>

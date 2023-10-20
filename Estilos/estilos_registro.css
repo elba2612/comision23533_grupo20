@@ -1,4 +1,9 @@
-.formulario_registro {
+form section,
+form button {
+    margin: 0 auto;
+}
+
+body {
     background-color: darkorange;
     margin: 10px;
     padding: 20px;
@@ -7,7 +12,7 @@
 
 }
 
-.form-group {
+.form-grupos {
     margin-bottom: 15px;
     /* Añade espacio entre grupos de elementos */
 }
@@ -20,7 +25,7 @@ label {
 }
 
 input {
-    width: 70%;
+    width: 100%;
     /* Los campos de entrada se expanden al 100% del ancho del contenedor */
     padding: 5px;
     /* Añade espaciado interior en los campos de entrada */
@@ -33,7 +38,20 @@ input {
 .form-buttons {
     margin-top: 20px;
     /* Añade espacio entre los campos de entrada y los botones */
-    margin-right: 850px;
+}
+
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .logo {
@@ -55,6 +73,31 @@ button {
     /* Añade esquinas redondeadas al botón */
     cursor: pointer;
     /* Cambia el cursor al estilo de puntero al pasar el ratón sobre el botón */
+}
+
+#check-recuerdame {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#recordarme {
+    display: inline;
+    width: 10%;
+}
+
+#olvidaste {
+    display: block;
+    
+}
+
+#recuerdame {
+    color: #555;
+    font-size: 13px;
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+    display: inline;
+
 }
 
 a {
