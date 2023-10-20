@@ -22,6 +22,16 @@ main {
 section {
     margin-bottom: 20px;
 }
+
+@font-face {
+    font-family: "Glacial Indifference";
+    src: url("../Sources/GlacialIndifference-Regular.otf");
+}
+
+.Glacial {
+    font-family: "Glacial Indifference";
+
+}
 .logo {
     width: 150px;
     height: 150px;
