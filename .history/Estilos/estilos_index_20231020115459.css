@@ -1,5 +1,5 @@
 body {
-    background-color: #ddd;
+    background-color: #222;
     margin: 0;
     padding: 0;
     font-family: "Glacial Indifference";
@@ -17,7 +17,9 @@ body {
 
 }
 
-
+.boton-nav {
+    font-size: 1.4vw;
+}
 
 .header {
     background-color: #FEA500;
@@ -42,6 +44,7 @@ h2 {
     font-weight: 300;
     font-size: 3.5vw;
     margin: 10px 0;
+    background-color: #F2460B;
 }
 
 
@@ -67,19 +70,6 @@ h2 {
     border-radius: 10px;
 }
 
-.boton-nav {
-    font-size: 1.4vw;
-    padding: 10px;
-    border-radius: 25px;
-}
-
-.boton-nav:hover {
-    background-color: #F2460B;
-    border: solid 1px #222;
-}
-
-
-
 .menu {
     list-style: none;
     padding: 0;
@@ -98,9 +88,9 @@ h2 {
     top: 100%;
     left: 0;
     text-decoration: none;
-    background-color: #F2460B;
+    background-color: #FEA500;
     border: 1px solid #222;
-    border-radius: 0 0 10px 10px;
+    border-radius: 0 0 5px 5px;
     padding: 5px 0;
     list-style: none;
 }
@@ -161,15 +151,4 @@ footer p {
 @font-face {
     font-family: "Glacial Indifference";
     src: url("../Sources/GlacialIndifference-Regular.otf");
-}
-
-@media (prefers-color-scheme: dark) {
-    .item {
-        color: #000;
-    }
-
-        body {
-            background-color: #222;
-        
-    }
 }

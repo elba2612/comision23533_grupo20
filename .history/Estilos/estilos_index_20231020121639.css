@@ -163,13 +163,13 @@ footer p {
     src: url("../Sources/GlacialIndifference-Regular.otf");
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
     .item {
         color: #000;
     }
 
         body {
-            background-color: #222;
+            background-color: #ddd;
         
     }
 }

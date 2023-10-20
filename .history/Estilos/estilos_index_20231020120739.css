@@ -162,14 +162,3 @@ footer p {
     font-family: "Glacial Indifference";
     src: url("../Sources/GlacialIndifference-Regular.otf");
 }
-
-@media (prefers-color-scheme: dark) {
-    .item {
-        color: #000;
-    }
-
-        body {
-            background-color: #222;
-        
-    }
-}

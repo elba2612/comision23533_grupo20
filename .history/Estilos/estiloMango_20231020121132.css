@@ -2,6 +2,8 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #222;
+    color: #fff;
 }
 
 header {
@@ -32,17 +34,15 @@ section {
     font-family: "Glacial Indifference";
 
 }
-
 .logo {
     width: 150px;
     height: 150px;
     margin-left: 0;
 }
-
 .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fit,
-            minmax(300px, 1fr));
+    minmax(300px, 1fr));
     grid-gap: 20px;
 }
 
@@ -52,6 +52,7 @@ section {
     border: 1px solid #4D9906;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: #000;
 }
 
 /* Estilos para dispositivos móviles */
@@ -69,13 +70,4 @@ footer {
     padding: 10px;
 }
 
-@media (prefers-color-scheme: dark) {
-    .item {
-        color: #000;
-    }
-
-    body {
-        background-color: #222;
-        color: #fff;
-    }
-}
+@

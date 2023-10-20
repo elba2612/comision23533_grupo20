@@ -1,5 +1,5 @@
 body {
-    background-color: #ddd;
+    background-color: #222;
     margin: 0;
     padding: 0;
     font-family: "Glacial Indifference";
@@ -71,6 +71,7 @@ h2 {
     font-size: 1.4vw;
     padding: 10px;
     border-radius: 25px;
+    box-sizing: ;
 }
 
 .boton-nav:hover {
@@ -161,15 +162,4 @@ footer p {
 @font-face {
     font-family: "Glacial Indifference";
     src: url("../Sources/GlacialIndifference-Regular.otf");
-}
-
-@media (prefers-color-scheme: dark) {
-    .item {
-        color: #000;
-    }
-
-        body {
-            background-color: #222;
-        
-    }
 }

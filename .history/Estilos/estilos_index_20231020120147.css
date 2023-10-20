@@ -1,5 +1,5 @@
 body {
-    background-color: #ddd;
+    background-color: #222;
     margin: 0;
     padding: 0;
     font-family: "Glacial Indifference";
@@ -69,16 +69,14 @@ h2 {
 
 .boton-nav {
     font-size: 1.4vw;
-    padding: 10px;
-    border-radius: 25px;
+    padding: 8px;
+    border-radius: 15px;
 }
 
 .boton-nav:hover {
     background-color: #F2460B;
-    border: solid 1px #222;
+
 }
-
-
 
 .menu {
     list-style: none;
@@ -98,9 +96,9 @@ h2 {
     top: 100%;
     left: 0;
     text-decoration: none;
-    background-color: #F2460B;
+    background-color: #FEA500;
     border: 1px solid #222;
-    border-radius: 0 0 10px 10px;
+    border-radius: 0 0 5px 5px;
     padding: 5px 0;
     list-style: none;
 }
@@ -161,15 +159,4 @@ footer p {
 @font-face {
     font-family: "Glacial Indifference";
     src: url("../Sources/GlacialIndifference-Regular.otf");
-}
-
-@media (prefers-color-scheme: dark) {
-    .item {
-        color: #000;
-    }
-
-        body {
-            background-color: #222;
-        
-    }
 }

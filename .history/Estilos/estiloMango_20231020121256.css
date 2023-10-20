@@ -32,17 +32,15 @@ section {
     font-family: "Glacial Indifference";
 
 }
-
 .logo {
     width: 150px;
     height: 150px;
     margin-left: 0;
 }
-
 .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fit,
-            minmax(300px, 1fr));
+    minmax(300px, 1fr));
     grid-gap: 20px;
 }
 
@@ -68,14 +66,12 @@ footer {
     text-align: center;
     padding: 10px;
 }
-
 @media (prefers-color-scheme: dark) {
-    .item {
+    .item{
         color: #000;
     }
-
-    body {
+    body{
         background-color: #222;
-        color: #fff;
+        
     }
 }
