@@ -23,7 +23,7 @@ body {
 
 
 
-.header {
+header {
     background-color: #FEA500;
     text-align: left;
     display: flex;
@@ -35,17 +35,17 @@ body {
     border: solid 3px #4D9906;
 }
 
+
 h1 {
     font-weight: 400;
     font-size: 6vw;
-    margin: auto;
-    margin-left: 20px;
+    margin: 0px;
 }
 
 h2 {
     font-weight: 300;
     font-size: 3.5vw;
-    margin: 10px 0;
+    margin: 0px;
 }
 
 
@@ -57,6 +57,8 @@ h2 {
 .title {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -74,7 +76,7 @@ nav {
 }
 
 .boton-nav {
-    padding: 0 10px;
+    padding: 5px 10px;
     font-size: 1.4vw;
     border-radius: 25px;
 }
@@ -108,6 +110,7 @@ nav {
     border-radius: 0 0 10px 10px;
     padding: 5px 0;
     list-style: none;
+    font-size: 1.4vw;
 }
 
 .menu a {
@@ -160,7 +163,6 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-top: #4D9906 solid 3px;
     text-align: center;
     padding: 1.5vw;
 }
@@ -188,11 +190,40 @@ footer p {
 
 @media only screen and (max-width: 800px) {
     .menu {
-        margin: 5px;
+        margin: 0px;
+        padding: 2px;
     }
 
-    .boton-nav {
+    .boton-nav,
+    .submenu {
         font-size: 2vw;
         padding: 3px;
+    }
+
+    .main img,
+    nav,
+    header {
+        border-width: 2px;
+    }
+
+    footer p {
+        font-size: 3vw;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+
+
+    .boton-nav,
+    .submenu {
+        font-size: 2.6vw;
+        padding: 3px;
+    }
+
+
+
+
+    header {
+        border-radius: 15px;
     }
 }
