@@ -15,17 +15,12 @@ body {
 .header {
     background-color: darkorange;
     text-align: left;
+
     display: flex;
     align-items: center;
     height: 18vw;
 }
-h1{
-    font-weight: 400;
-}
-h2{
-    font-weight: 300;
 
-}
 
 
 .logo {
@@ -123,13 +118,8 @@ footer {
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
     border-top: #333 solid 2px;
     text-align: center;
-    padding: 1.5vw;
-}
-
-footer p {
-    margin: 0px;
-    font-size: 1.4vw;
+    padding: 10px;
+    height: 10px;
 }

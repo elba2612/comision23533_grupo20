@@ -1,3 +1,4 @@
+
 body {
     background-color: darkorange;
     margin: 0;
@@ -15,22 +16,20 @@ body {
 .header {
     background-color: darkorange;
     text-align: left;
+
     display: flex;
     align-items: center;
-    height: 18vw;
-}
-h1{
-    font-weight: 400;
-}
-h2{
-    font-weight: 300;
-
+    height: 50vw;
 }
 
+.logo-container {
+    margin-right: 10px;
+}
 
 .logo {
-    width: 10vw;
-    margin-right: 10px;
+    width: 150px;
+    height: 150px;
+    margin-left: 0;
 }
 
 .title {
@@ -38,14 +37,14 @@ h2{
     flex-direction: column;
 }
 
-h1 {
+.title .line1 {
     font-size: 80px;
     margin: auto;
     margin-left: 20px;
 
 }
 
-h2 {
+.title .line2 {
     font-size: 50px;
     margin: 10px 0;
 
@@ -120,16 +119,7 @@ main {
 footer {
     background-color: darkorange;
     color: black;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-top: #333 solid 2px;
     text-align: center;
-    padding: 1.5vw;
-}
-
-footer p {
-    margin: 0px;
-    font-size: 1.4vw;
+    padding: 10px;
+    height: 10px;
 }
