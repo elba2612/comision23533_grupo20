@@ -7,6 +7,12 @@ body {
 
 }
 
+.caja{
+    background-color: #FEA500;
+    border: 3px solid #4D9906;
+    border-radius: 20px;
+}
+
 
 .contenedor-flex {
     display: flex;
@@ -24,15 +30,12 @@ body {
 
 
 header {
-    background-color: #FEA500;
     text-align: left;
     display: flex;
     align-items: center;
     height: 16vw;
     margin: 10px;
     padding: 10px;
-    border-radius: 30px;
-    border: solid 3px #4D9906;
 }
 
 
@@ -65,14 +68,13 @@ h2 {
 
 
 nav {
-    background-color: #FEA500;
     color: black;
     padding: 0px;
     display: flex;
     flex-direction: row;
     height: 6vw;
-    border: 3px solid #4D9906;
-    border-radius: 10px;
+    position: sticky;
+    top: 20px;
 }
 
 .boton-nav {
@@ -85,6 +87,7 @@ nav {
     background-color: #F2460B;
     border: solid 1px #222;
 }
+
 
 
 
@@ -140,18 +143,50 @@ nav {
     color: white;
 }
 
-main {
-    height: 110%;
+#busqueda {
+    border-radius: 30px;
+    height: 1.5rem;
+    padding: 0px 10px;
+    width: 70%;
+    max-width: 400px;
+}
 
+.caja-busqueda {
+    height: 0px;
+    opacity: 0;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    width: 95%;
+    margin: 5px;
+}
+
+.abierto {
+    height: 80vh;
+    transition: 0.3s;
+    opacity: 1;
+    border-radius: 10px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    margin: 10px;
+}
+
+main {
     text-align: center;
-    padding: 20px 0;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .main img {
     max-height: 90%;
     max-width: 100%;
-    border: 3px solid #4D9906;
-    border-radius: 10px;
 }
 
 footer {
@@ -181,11 +216,10 @@ footer p {
     .item {
         color: #000;
     }
-
     body {
         background-color: #222;
-
     }
+    
 }
 
 @media only screen and (max-width: 800px) {
