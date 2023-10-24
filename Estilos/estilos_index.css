@@ -108,7 +108,7 @@ nav.caja {
     display: none;
     position: absolute;
     top: 100%;
-    left: 0;
+    align-self: center;
     text-decoration: none;
     background-color: #F2460B;
     border: 1px solid #222;
