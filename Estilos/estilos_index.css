@@ -204,9 +204,10 @@ footer {
     justify-self: end;
 }
 
-footer p {
-    margin: 0px;
-    font-size: 1.4vw;
+
+footer a{
+    text-decoration: none;
+    color: #000;
 }
 
 @font-face {

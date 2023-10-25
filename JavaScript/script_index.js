@@ -10,31 +10,31 @@ function sleep(ms) {
 }
 
 document.getElementById('menu-hamburguesa').addEventListener('click', () => {
-    
-    
+
+
 
 
 
 })
 
 document.body.addEventListener('click', function (e) {
-    let ids=[];
+    let ids = [];
     ids.push(e.target);
     ids.push(e.target.parentNode);
     ids.push(e.target.parentNode.parentNode);
-    let esId=false;
-    let esClass=false;
+    let esId = false;
+    let esClass = false;
     for (const id of ids) {
-        if (id.id=='menu-hamburguesa'){
-            esId=true;
+        if (id.id == 'menu-hamburguesa') {
+            esId = true;
         }
-        if (id.classList&&id.classList.contains('boton-nav')){
-            esClass=true;
+        if (id.classList && id.classList.contains('boton-nav')) {
+            esClass = true;
         }
     }
     let nav = document.getElementsByTagName('nav');
     let menu = document.getElementsByClassName('menu');
-    if ((!esClass && menu[0].classList.contains('visible'))||(esId && menu[0].classList.contains('visible'))) {
+    if ((!esClass && menu[0].classList.contains('visible')) || (esId && menu[0].classList.contains('visible'))) {
         menu[0].classList.remove('visible');
         nav[0].classList.remove('para-hamburguesa');
         menu[0].style.position = 'absolute';
@@ -46,5 +46,15 @@ document.body.addEventListener('click', function (e) {
             menu[0].classList.add('visible');
             menu[0].style.position = 'static';
         })
-    } 
+    }
 });
+
+
+// const params = {
+//     access_key: ''
+// }
+
+// fetch('http://api.marketstack.com/v1/eod?access_key=' + params.access_key + '&symbols=AAPL').then(response => {
+//     const apiResponse = response.formData;
+//     console.log(apiResponse)
+// }).catch(err => console.log(err))
