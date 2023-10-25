@@ -27,12 +27,30 @@
         <form action="achivodeprocesamiento.php" method="post">
             <section class="form-grupos">
                 <label for="nombre">Nombre de Usuario:</label>
-                <input type="text" name="nombre" id="nombre" required>
+                <input type="text" name="nombre" minlength="7" id="nombre" required>
             </section>
             <section class="form-grupos">
                 <label for="pass">Contraseña:</label>
-                <input type="password" name="pass" id="pass" required>
+                <input type="password" name="pass" minlength="7"   id="pass" required>
             </section>
+            <dialog id="dialog">
+                <h1>La clave y el usuario</h1>
+                <p>Deben tener mas de seis caracteres.Muchas gracias </p> 
+                <button id="hide">Cerrar</button>
+            </dialog>
+            <button id="show">
+                Formato
+                Usuario y Contraseña ???
+            </button>
+            <script>
+                window.show.addEventListener('click',()=>{
+                    window.dialog.showModal()
+                })
+                window.hide.addEventListener('click',()=>{
+                    window.dialog.close()
+                })
+            </script>
+
             <section class="form-grupos">
                 <label for="nombre-y-apellido">Nombre y Apellido:</label>
                 <input type="text" name="nombre-y-apellido" id="nombre-y-apellido" required>
