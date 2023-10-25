@@ -132,6 +132,13 @@ nav.caja {
     display: block;
 }
 
+.contenedor-busqueda-nav {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
 
 
 .submenu li a {
@@ -205,7 +212,7 @@ footer {
 }
 
 
-footer a{
+footer a {
     text-decoration: none;
     color: #000;
 }
@@ -250,10 +257,22 @@ footer a{
 
 @media only screen and (max-width: 550px) {
     nav.caja {
-        height: 15vw;
+        height: 8vw;
         border-radius: 50px;
-        width: 20vw;
+        width: 9vw;
         align-self: flex-end;
+    }
+
+    .contenedor-busqueda-nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    #busqueda {
+        height: 8vw;
+        background-position: bottom 8px right 15px;
     }
 
     .menu {
@@ -275,20 +294,8 @@ footer a{
         height: 100%;
     }
 
-    #menu-hamburguesa {
-        display: block;
-        padding: 2vw;
-        margin: auto;
-        border-radius: 999px;
-    }
 
-    nav.para-hamburguesa {
-        height: 300px;
-        width: fit-content;
-        border-radius: 50px;
-        display: grid;
-        grid-template-rows: 15vw calc(100% - 15vw)
-    }
+
 
     .submenu {
         top: 0%;
@@ -303,8 +310,24 @@ footer a{
     .submenu {
         font-size: 2.8vw;
         padding: 3px;
+        padding: 0.5vw;
+        margin: auto;
+        border-radius: 999px;
     }
 
+    #menu-hamburguesa {
+        display: block;
+    }
+
+    nav.para-hamburguesa {
+        height: 35vw;
+        width: fit-content;
+        margin: 5px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
 
 }
