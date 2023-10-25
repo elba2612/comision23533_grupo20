@@ -131,6 +131,12 @@ nav.caja {
 .menu li:hover .submenu {
     display: block;
 }
+.contenedor-busqueda-nav{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-evenly;
+}
 
 
 
@@ -255,6 +261,12 @@ footer a{
         width: 20vw;
         align-self: flex-end;
     }
+        .contenedor-busqueda-nav {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-evenly;
+        }
 
     .menu {
         width: 0;
