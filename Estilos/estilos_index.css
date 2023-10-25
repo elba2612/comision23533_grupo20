@@ -7,32 +7,35 @@ body {
 
 }
 
+.caja {
+    background-color: #FEA500;
+    border: 3px solid #4D9906;
+    border-radius: 20px;
+}
+
 
 .contenedor-flex {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 130%;
-    height: calc(100vh + 4.4vw);
+    height: 110%;
+    min-height: 100vh;
+    max-height: calc(100svh + 4.4vw);
 }
 
 .svg {
     margin-right: 6px;
-
 }
 
 
 
 header {
-    background-color: #FEA500;
     text-align: left;
     display: flex;
     align-items: center;
     height: 16vw;
     margin: 10px;
     padding: 10px;
-    border-radius: 30px;
-    border: solid 3px #4D9906;
 }
 
 
@@ -62,17 +65,18 @@ h2 {
 }
 
 
+#menu-hamburguesa {
+    display: none;
+}
 
-
-nav {
-    background-color: #FEA500;
+nav.caja {
     color: black;
     padding: 0px;
     display: flex;
     flex-direction: row;
     height: 6vw;
-    border: 3px solid #4D9906;
-    border-radius: 10px;
+    position: sticky;
+    top: 20px;
 }
 
 .boton-nav {
@@ -85,6 +89,7 @@ nav {
     background-color: #F2460B;
     border: solid 1px #222;
 }
+
 
 
 
@@ -103,7 +108,7 @@ nav {
     display: none;
     position: absolute;
     top: 100%;
-    left: 0;
+    align-self: center;
     text-decoration: none;
     background-color: #F2460B;
     border: 1px solid #222;
@@ -127,6 +132,8 @@ nav {
     display: block;
 }
 
+
+
 .submenu li a {
     color: #222;
     padding: 5px 15px;
@@ -140,22 +147,51 @@ nav {
     color: white;
 }
 
-main {
-    height: 110%;
+#busqueda {
+    border-radius: 30px;
+    height: 1.5rem;
+    padding: 0px 10px;
+    width: 70%;
+    max-width: 200px;
+    background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E") no-repeat;
+    background-position: bottom 5px right 15px;
+}
 
+
+
+.caja-busqueda {
+    height: 0px;
+    opacity: 0;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    width: 95%;
+    margin: 5px;
+}
+
+
+.para-caja {
+    height: 80vh;
+    margin: 10px;
+}
+
+main {
     text-align: center;
-    padding: 20px 0;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
 }
 
 .main img {
     max-height: 90%;
     max-width: 100%;
-    border: 3px solid #4D9906;
-    border-radius: 10px;
 }
 
 footer {
-    position: static;
     bottom: 0px;
     background-color: #4D9906;
     color: black;
@@ -165,6 +201,7 @@ footer {
     align-items: center;
     text-align: center;
     padding: 1.5vw;
+    justify-self: end;
 }
 
 footer p {
@@ -184,8 +221,8 @@ footer p {
 
     body {
         background-color: #222;
-
     }
+
 }
 
 @media only screen and (max-width: 800px) {
@@ -196,13 +233,12 @@ footer p {
 
     .boton-nav,
     .submenu {
-        font-size: 2vw;
+        font-size: 2.3vw;
         padding: 3px;
+        align-content: center;
     }
 
-    .main img,
-    nav,
-    header {
+    .caja {
         border-width: 2px;
     }
 
@@ -211,13 +247,74 @@ footer p {
     }
 }
 
+@media only screen and (max-width: 550px) {
+    nav.caja {
+        height: 15vw;
+        border-radius: 50px;
+        width: 20vw;
+        align-self: flex-end;
+    }
+
+    .menu {
+        width: 0;
+        height: 0;
+        margin: 0;
+        opacity: 0;
+        box-sizing: border-box;
+        display: none;
+        position: relative;
+    }
+
+    nav .menu.visible {
+        display: flex;
+        width: auto;
+        border-radius: 20px;
+        flex-direction: column;
+        grid-row-start: 2;
+        height: 100%;
+    }
+
+    #menu-hamburguesa {
+        display: block;
+        padding: 2vw;
+        margin: auto;
+        border-radius: 999px;
+    }
+
+    nav.para-hamburguesa {
+        height: 300px;
+        width: fit-content;
+        border-radius: 50px;
+        display: grid;
+        grid-template-rows: 15vw calc(100% - 15vw)
+    }
+
+    .submenu {
+        top: 0%;
+        left: -70%;
+        border-radius: 10px 0px 0px 10px;
+        padding: 5px 0;
+        list-style: none;
+        font-size: 1.4vw;
+    }
+
+    .boton-nav,
+    .submenu {
+        font-size: 2.8vw;
+        padding: 3px;
+    }
+
+
+
+}
+
 @media only screen and (max-width: 350px) {
 
 
     .boton-nav,
     .submenu {
-        font-size: 2.6vw;
-        padding: 3px;
+        font-size: 3vw;
+        padding: 2px;
     }
 
 
@@ -226,4 +323,14 @@ footer p {
     header {
         border-radius: 15px;
     }
+}
+
+.visible {
+    opacity: 1;
+    border-radius: 10px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
