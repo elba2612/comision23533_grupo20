@@ -50,34 +50,44 @@ document.body.addEventListener('click', function (e) {
 });
 
 
-// const params = {
-//     access_key: ''
-// }
 
-// fetch('http://api.marketstack.com/v1/eod?access_key=' + params.access_key + '&symbols=AAPL').then(response => {
-//     const apiResponse = response.formData;
-//     console.log(apiResponse)
-// }).catch(err => console.log(err))
 
-// Obtener una referencia al iframe
-const iframe = document.getElementById('responsive-iframe');
+const url = 'https://metalpriceapi.p.rapidapi.com/v1/latest?api_key=b2685b54d7c7d0313f1d05e8a8dc7761&base=USD&currencies=XAU';
+const options = {
+    method: 'GET',
+    headers: {
+        'X-RapidAPI-Key': 'e7639d8764msh3ecaf10d2104778p1b0ca0jsnff915543a065',
+        'X-RapidAPI-Host': 'metalpriceapi.p.rapidapi.com'
+    }
+};
 
-// Función para cambiar la fuente del iframe
-function changeVideoSource() {
-    const screenWidth = window.innerWidth;
-
-    if (screenWidth < 768) {
-        // Dispositivo móvil
-        iframe.src = 'Sources/registrateVertical FULL (375 x 667 px).mp4';
-    } else if (screenWidth >= 768 && screenWidth < 1024) {
-        // Tableta
-        iframe.src = 'Sources/registrateHorizontal FULL (1366 x 768 px).mp4';
-    } else {
-        // Pantalla grande (PC)
-        iframe.src = 'Sources/registrateHorizontal FULL (1440 x 900 px).mp4';
+getPrice();
+async function getPrice() {
+    try {
+        const response = await fetch(url, options);
+        const result = await response.text();
+        console.log(result);
+    } catch (error) {
+        console.error(error);
     }
 }
 
-// Ejecutar la función al cargar la página y en cambios de tamaño de ventana
-window.addEventListener('load', changeVideoSource);
-window.addEventListener('resize', changeVideoSource);
+
+
+let wide = window.matchMedia("(min-width: 550px");
+function wideSize(wide) {
+    let nav = document.getElementsByTagName('nav');
+    let menu = document.getElementsByClassName('menu');
+    if (wide.matches) {
+        menu[0].style.display = 'flex';
+        menu[0].classList.add('visible');
+        menu[0].style.position = 'static';
+    } else {
+        menu[0].style.display = 'none';
+        menu[0].classList.remove('visible');
+        menu[0].style.position = 'absolute';
+        nav[0].classList.remove('para-hamburguesa');
+    }
+}
+wideSize(wide);
+wide.addListener(wideSize);
