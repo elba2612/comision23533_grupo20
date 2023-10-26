@@ -204,16 +204,13 @@ main {
     max-width: 100%;
 }
 
-#responsive-iframe {
+#responsive-video {
     width: 80%;
     height: 70vh; /* El video ocupará el 70% de la altura de la ventana */
-    max-height: 90%; /* Para limitar la altura del iframe al 90% de la ventana */
-    max-width: 100%; /* Para limitar el ancho del iframe al 100% de la ventana */
+    max-height: 90%; /* Para limitar la altura del video al 90% de la ventana */
+    max-width: 100%; /* Para limitar el ancho del video al 100% de la ventana */
     background-color: #ddd;
-    border: 3px solid #4D9906;
-    border-radius: 20px;
-    
-}
+    }
 
 
 footer {
