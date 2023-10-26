@@ -63,6 +63,9 @@ h2 {
     align-items: center;
     justify-content: center;
 }
+#precio{
+    display: inline;
+}
 
 
 #menu-hamburguesa {
@@ -132,7 +135,7 @@ nav.caja {
     display: block;
 }
 
-.contenedor-busqueda-nav {
+#contenedor-busqueda-nav {
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
@@ -255,6 +258,7 @@ footer a {
     }
 }
 
+
 @media only screen and (max-width: 550px) {
     nav.caja {
         height: 8vw;
@@ -263,7 +267,7 @@ footer a {
         align-self: flex-end;
     }
 
-    .contenedor-busqueda-nav {
+    #contenedor-busqueda-nav {
         display: flex;
         flex-direction: row;
         align-items: center;
