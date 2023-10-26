@@ -1,9 +1,10 @@
-header {
-    background-color: #F2460B;
-    color: white;
-    text-align: center;
-    padding: 20px;
+* {
+  margin: 0;
+  padding: 0;
 }
+
+
+
 @font-face {
     font-family: "Glacial Indifference";
     src: url("../Sources/GlacialIndifference-Regular.otf");
@@ -14,11 +15,90 @@ header {
 
 }
 
-.logo {
-    width: 150px;
-    height: 150px;
-    margin-left: 0;
+/*body {
+  background-color: #f2460b;
+  margin: 0;
+  padding: 0;
+  font-family: "Glacial Indifference";
+  height: 100svh;
+
+}*/
+
+/* .caja { 
+  background-color: #FEA500;
+  border: 3px solid #4D9906;
+  border-radius: 20px;
+}*/
+
+/*.contenedor-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 110%;
+  min-height: 100vh;
+  max-height: calc(100svh + 4.4vw);
+}*/
+
+/*.svg {
+  margin-right: 6px;
+}*/
+header {
+  background-color: #f2460b;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  height: 16vw;
+  margin: 10px;
+  padding: 10px;
 }
+
+
+h1 {
+  text-align: center;
+  font-weight: 400;
+  font-size: 6vw;
+  margin: 0px;
+  color: white;
+  width:80vw ;
+}
+
+/*h2 {
+  font-weight: 300;
+  font-size: 3.5vw;
+  margin: 0px;
+}*/
+
+
+.logo {
+  width: 18vw;
+  margin-right: 10px;
+}
+
+
+
+
+/* header {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+  background-color: #F2460B;
+  height: 250px;
+  text-align: center;
+}
+h1 {
+  position: absolute;
+  color: white;  
+  font-weight: 200;
+  font-size: 4vw;
+  left: 40%;
+  
+}
+
+.logo {
+  position:absolute;
+  width: 15vw;
+  left: 10px;
+  
+}*/
 
 input {
       width: 30%;
@@ -61,7 +141,7 @@ input {
   
   .grid-item img {
     position: absolute;
-    left: -12px;
+    left: 5px;
     border: 10px;
     width: 100%;
     height: 100%;
