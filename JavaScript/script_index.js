@@ -50,11 +50,44 @@ document.body.addEventListener('click', function (e) {
 });
 
 
-// const params = {
-//     access_key: ''
-// }
 
-// fetch('http://api.marketstack.com/v1/eod?access_key=' + params.access_key + '&symbols=AAPL').then(response => {
-//     const apiResponse = response.formData;
-//     console.log(apiResponse)
-// }).catch(err => console.log(err))
+
+const url = 'https://metalpriceapi.p.rapidapi.com/v1/latest?api_key=b2685b54d7c7d0313f1d05e8a8dc7761&base=USD&currencies=XAU';
+const options = {
+    method: 'GET',
+    headers: {
+        'X-RapidAPI-Key': 'e7639d8764msh3ecaf10d2104778p1b0ca0jsnff915543a065',
+        'X-RapidAPI-Host': 'metalpriceapi.p.rapidapi.com'
+    }
+};
+
+getPrice();
+async function getPrice() {
+    try {
+        const response = await fetch(url, options);
+        const result = await response.text();
+        console.log(result);
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+
+
+let wide = window.matchMedia("(min-width: 550px");
+function wideSize(wide) {
+    let nav = document.getElementsByTagName('nav');
+    let menu = document.getElementsByClassName('menu');
+    if (wide.matches) {
+        menu[0].style.display = 'flex';
+        menu[0].classList.add('visible');
+        menu[0].style.position = 'static';
+    } else {
+        menu[0].style.display = 'none';
+        menu[0].classList.remove('visible');
+        menu[0].style.position = 'absolute';
+        nav[0].classList.remove('para-hamburguesa');
+    }
+}
+wideSize(wide);
+wide.addListener(wideSize);
