@@ -65,8 +65,9 @@ getPrice();
 async function getPrice() {
     try {
         const response = await fetch(url, options);
-        const result = await response.text();
-        console.log(result);
+        const result = JSON.parse(await response.text());
+        console.log(result.rates.XAU);
+        document.querySelector('#precio').textContent=`Precio del oro: $${(1/result.rates.XAU).toFixed(2)} por onza de oro`;
     } catch (error) {
         console.error(error);
     }
