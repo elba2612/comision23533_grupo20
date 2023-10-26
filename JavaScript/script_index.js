@@ -58,3 +58,26 @@ document.body.addEventListener('click', function (e) {
 //     const apiResponse = response.formData;
 //     console.log(apiResponse)
 // }).catch(err => console.log(err))
+
+// Obtener una referencia al iframe
+const iframe = document.getElementById('responsive-iframe');
+
+// Función para cambiar la fuente del iframe
+function changeVideoSource() {
+    const screenWidth = window.innerWidth;
+
+    if (screenWidth < 768) {
+        // Dispositivo móvil
+        iframe.src = 'Sources/registrateVertical FULL (375 x 667 px).mp4';
+    } else if (screenWidth >= 768 && screenWidth < 1024) {
+        // Tableta
+        iframe.src = 'Sources/registrateHorizontal FULL (1366 x 768 px).mp4';
+    } else {
+        // Pantalla grande (PC)
+        iframe.src = 'Sources/registrateHorizontal FULL (1440 x 900 px).mp4';
+    }
+}
+
+// Ejecutar la función al cargar la página y en cambios de tamaño de ventana
+window.addEventListener('load', changeVideoSource);
+window.addEventListener('resize', changeVideoSource);

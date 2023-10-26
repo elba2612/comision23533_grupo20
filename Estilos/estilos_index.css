@@ -190,13 +190,28 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     flex: 1;
+    width: 100%;  
+    background-color: #ddd; 
 }
 
 .main img {
     max-height: 90%;
     max-width: 100%;
 }
+
+#responsive-iframe {
+    width: 80%;
+    height: 70vh; /* El video ocupará el 70% de la altura de la ventana */
+    max-height: 90%; /* Para limitar la altura del iframe al 90% de la ventana */
+    max-width: 100%; /* Para limitar el ancho del iframe al 100% de la ventana */
+    background-color: #ddd;
+    border: 3px solid #4D9906;
+    border-radius: 20px;
+    
+}
+
 
 footer {
     bottom: 0px;
@@ -358,3 +373,4 @@ footer a {
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 }
+
