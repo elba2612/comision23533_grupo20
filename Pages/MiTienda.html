@@ -16,34 +16,41 @@
         <h1 class="Glacial">Mi tienda</h1>
 
     </header>
+    <nav>
+        <input class="topnav" type="text" name="busqueda" placeholder="Buscar productos..">
 
-    <input class="topnav" type="text" name="busqueda" placeholder="Buscar productos..">
-    <section class="grid-container">
+        <ul>
+            <li id="boton-agregar">Agregar Producto</li>
+            <li id="boton-editar">Editar Producto</li>
+            <li id="boton-eliminar">Eliminar Producto</li>
 
-        <article class="grid-item">
-            <a href="../Sources/Bici2.jpeg">
-                <img src="../Sources/Bici2.jpeg" alt="Bicicleta">
-                <p class="Glacial">Bicicleta rodado 26, usada, 100 Mangos</p>
-            </a>
-        </article>
-        <article class="grid-item">
-            <a href="../Sources/tv.jpg">
-                <img src="../Sources/tv.jpg" alt="Imagen 2">
-                <p class="Glacial">Tv 32 pulgadas usada, 150 Mangos</p>
+        </ul>
+    </nav>
+    <section class="flex-container">
+        <div id="modal-agregar" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p>Agregar producto</p>
+            </div>
+        </div>
+        <div id="modal-editar" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p>Agregar producto</p>
+            </div>
+        </div>
+        <div id="modal-eliminar" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p>Agregar producto</p>
+            </div>
+        </div>
 
-            </a>
-        </article>
-        <article class="grid-item">
-            <a href="../Sources/YerbaSalus2.jpg">
-                <img src="../Sources/YerbaSalus2.jpg" alt="Imagen 3">
 
-                <p class="Glacial">Caja de 10 paquetes de yerba Salus x 1kg, 30 Mangos</p>
-
-            </a>
-        </article>
 
 
     </section>
 </body>
 <script src="../JavaScript/script_mi_tienda.js"></script>
+
 </html>
