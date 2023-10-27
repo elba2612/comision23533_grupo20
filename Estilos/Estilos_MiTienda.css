@@ -25,7 +25,7 @@ nav {
   height: fit-content;
 }
 
-ul {
+#opciones-nav {
   flex-grow: 1;
   display: flex;
   flex-direction: row;
@@ -34,7 +34,8 @@ ul {
   justify-content: space-evenly;
 }
 
-li {
+li,
+#menu-hamburguesa {
   border: solid 1px #4D9906;
   background-color: #f2460b;
   border-radius: 30px;
@@ -45,6 +46,12 @@ li {
   /* IE 10 and IE 11 */
   user-select: none;
   /* Standard syntax */
+}
+
+#menu-hamburguesa {
+  display: none;
+  align-self: center;
+  height: 30px;
 }
 
 li:hover {
@@ -122,7 +129,7 @@ input {
 }
 
 .topnav {
-  width: 100%;
+  max-width: 350px;
   border: 2px solid #4D9906;
   border-radius: 50px;
   font-size: 16px;
@@ -131,7 +138,7 @@ input {
   background-size: 16px;
   background-position: 95% center;
   background-repeat: no-repeat;
-  padding: 10px;
+  padding: 13px;
   margin: 20px auto;
   display: block;
 }
@@ -156,7 +163,7 @@ input {
   padding: 20px;
 }
 
-.flex-item {
+/* .flex-item {
   position: relative;
   background-color: #ddd;
   border-radius: 5px;
@@ -165,48 +172,55 @@ input {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* Mantiene una relación de aspecto cuadrada para las imágenes */
   border: 2px solid #4D9906;
   vertical-align: bottom;
+} */
+header.producto {
+  font-size: 15px;
 }
 
-.grid-item {
+.flex-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.flex-item {
   position: relative;
+  height: 280px;
+  width: 280px;
   background-color: lightgray;
   border-radius: 5px;
   overflow: hidden;
   border: 2px solid #4D9906;
 }
 
-header.producto {
-  font-size: 15px;
-}
 
-.flex-item footer,
+
+/* .flex-item footer,
 .flex-item header {
   width: 100%;
   position: relative;
   box-sizing: border-box;
   height: 15%;
   background-color: #ddd;
-}
-
+} */
+/* 
 .flex-item footer {
   padding-top: 10px;
-}
-
+} */
+/* 
 .flex-item a div {
   position: relative;
   overflow: hidden;
-}
-
+} */
+/* 
 .flex-item img {
   position: absolute;
   width: 100%;
   height: 100%;
   object-fit: fit;
-  /* Ajusta la imagen para llenar completamente el contenedor */
-}
+} */
 
 p {
   position: absolute;
@@ -263,17 +277,21 @@ p {
 }
 
 @media (max-width: 768px) {
-  /* .flex-container {
-    flex-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  } */
+  #opciones-nav{
+    display: none;
+  }
+  #menu-hamburguesa {
+      display: block;
+      align-self: center;
+      height: 30px;
+    }
+    
 }
 
 @media (prefers-color-scheme: dark) {
 
   body,
-  .flex-item,
-  .flex-item footer,
-  .flex-item header {
+  .flex-item {
     background-color: #222;
     color: #fff;
   }
@@ -281,11 +299,7 @@ p {
 
 }
 
-.grid-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+
 
 .image-info {
   position: absolute;
@@ -296,6 +310,8 @@ p {
   padding: 10px;
   color: white;
   text-align: center;
+  display: flex;
+  align-items: center;
 }
 
 .image-title1 {
@@ -306,15 +322,19 @@ p {
 .image-title2 {
   font-size: 1em;
   margin: 0;
+  flex-grow: 1;
 }
 
 .image-description {
   font-size: 1.4em;
   margin: 0;
+  position: static;
+  align-self: flex-end;
 }
 
 .image-header {
   position: absolute;
+  font-size: 13px;
   top: 0;
   left: 0;
   right: 0;
@@ -322,4 +342,5 @@ p {
   padding: 10px;
   color: rgb(255, 255, 255);
   text-align: center;
+  height: 29%;
 }

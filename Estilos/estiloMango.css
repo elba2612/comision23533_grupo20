@@ -6,6 +6,7 @@ body {
 
 .svg {
     margin-right: 6px;
+    pointer-events: none;
 }
 
 header {
