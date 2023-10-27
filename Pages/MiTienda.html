@@ -17,7 +17,7 @@
 
     </header>
     <nav>
-        <input class="topnav" type="text" name="busqueda" placeholder="Buscar productos..">
+        <input class="topnav" type="text" name="busqueda" id="busqueda" placeholder="Buscar productos..">
         <ul id="opciones-nav">
             <li id="boton-agregar">Agregar Producto</li>
             <li id="boton-editar">Editar Producto</li>
@@ -36,18 +36,62 @@
             <div class="modal-content">
                 <span class="close">&times;</span>
                 <p>Agregar producto</p>
+                <form action="" method="post">
+                    <section class="form-grupos">
+                        <label for="titulo">Titulo:</label>
+                        <input type="text" name="titulo"  id="titulo" required>
+                    </section>
+                    <section class="form-grupos">
+                        <label for="descripcion">Descripción:</label>
+                        <input type="text" name="descripcion"  id="descripcion" required>
+                    </section>
+                
+                    <section class="form-grupos">
+                        <label for="fotos">Fotos:</label>
+                        <input type="file" name="fotos" id="fotos" accept="image/png, image/jpeg" required>
+                    </section>
+                    <section>
+                        <label for="precio">Precio:</label>
+                        <input type="number" name="precio" id="precio">
+                    </section>
+
+                    <input class="form-buttons" type="submit" value="GUARDAR">
+                </form>
             </div>
         </div>
         <div id="modal-editar" class="modal">
             <div class="modal-content">
                 <span class="close">&times;</span>
-                <p>Agregar producto</p>
+                <p>Editar producto</p>
+                <form action="" method="post">
+                    <section class="form-grupos">
+                        <label for="titulo">Titulo:</label>
+                        <input type="text" name="titulo" id="titulo" required>
+                    </section>
+                    <section class="form-grupos">
+                        <label for="descripcion">Descripción:</label>
+                        <input type="text" name="descripcion" id="descripcion" required>
+                    </section>
+                
+                    <section class="form-grupos">
+                        <label for="fotos">Fotos:</label>
+                        <input type="file" name="fotos" id="fotos" accept="image/png, image/jpeg" required>
+                    </section>
+                    <section>
+                        <label for="precio">Precio:</label>
+                        <input type="number" name="precio" id="precio">
+                    </section>
+                
+                    <input class="form-buttons" type="submit" value="GUARDAR">
+                </form>
             </div>
         </div>
         <div id="modal-eliminar" class="modal">
             <div class="modal-content">
                 <span class="close">&times;</span>
-                <p>Agregar producto</p>
+                <p>Eliminar producto</p>
+                Estas seguro?
+
             </div>
         </div>
 
@@ -55,32 +99,7 @@
 
 
 
-        <article class="flex-item">
-            <a href="../Sources/tv.jpg">
-                <img src="../Sources/tv.jpg" alt="Imagen 2">
-                <div class="image-header">
-                    <h2 class="image-title1">TV marca DAEWOO</h2>
-                </div>
-                <div class="image-info">
-                    <h2 class="image-title2">TV 32 pulgadas, con HDMI USB usado excelente estado</h2>
-                    <p class="image-description">150 Mangos</p>
-                </div>
-                <p class="Glacial">Tv 32 pulgadas usada, 150 Mangos</p>
-
-            </a>
-        </article>
-        <article class="flex-item">
-            <a href="../Sources/YerbaSalus2.jpg">
-                <img src="../Sources/YerbaSalus2.jpg" alt="Imagen 3">
-                <div class="image-header">
-                    <h2 class="image-title1">Yerba Salus la mejor</h2>
-                </div>
-                <div class="image-info">
-                    <h2 class="image-title2">Caja de 10 paquetes de yerba Salus x 1kg</h2>
-                    <p class="image-description">30 Mangos</p>
-                </div>
-            </a>
-        </article>
+        
 
 
 

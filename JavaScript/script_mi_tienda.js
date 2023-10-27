@@ -1,4 +1,6 @@
 const section = document.querySelector('.flex-container');
+const wide = window.matchMedia("(min-width: 768px");
+
 
 function crearArticulo(img, textoHeader, textoFooter, textoPrecio) {
     let art = document.createElement('article');
@@ -39,25 +41,27 @@ for (let i = 0; i < spans.length; i++) {
 
 }
 document.body.addEventListener('click', (e) => {
-    let ids = [];
-    let opciones=document.getElementById('opciones-nav')
-    ids.push(e.target);
-    ids.push(e.target.parentNode);
-    ids.push(e.target.parentNode.parentNode);
-    let esId = false;
-    for (const id of ids) {
-        if (id.id == 'menu-hamburguesa') {
-            esId = true;
-        }
+    if (!wide.matches) {
+        let ids = [];
+        let opciones = document.getElementById('opciones-nav')
+        ids.push(e.target);
+        ids.push(e.target.parentNode);
+        ids.push(e.target.parentNode.parentNode);
+        let esId = false;
+        for (const id of ids) {
+            if (id.id == 'menu-hamburguesa') {
+                esId = true;
+            }
 
-    }
-    if (esId&&opciones.style.display!='block') {
-        opciones.style.display = 'block';
-    }else if(esId&&opciones.style.display=='block'){
-        console.log('esta');
-        opciones.style.display='none';
-    }else{
-        opciones.style.display='none';
+        }
+        if (esId && opciones.style.display != 'block') {
+            opciones.style.display = 'block';
+        } else if (esId && opciones.style.display == 'block') {
+            console.log('esta');
+            opciones.style.display = 'none';
+        } else {
+            opciones.style.display = 'none';
+        }
     }
 })
 

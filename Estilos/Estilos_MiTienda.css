@@ -113,9 +113,9 @@ img {
   position: relative;
 }
 
-input {
+#busqueda {
   width: 30%;
-  height: 20px;
+  height: 30px;
   border: 2px solid #4D9906;
   border-radius: 50px;
   font-size: 16px;
@@ -163,18 +163,6 @@ input {
   padding: 20px;
 }
 
-/* .flex-item {
-  position: relative;
-  background-color: #ddd;
-  border-radius: 5px;
-  width: 250px;
-  height: 250px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: 2px solid #4D9906;
-  vertical-align: bottom;
-} */
 header.producto {
   font-size: 15px;
 }
@@ -195,32 +183,6 @@ header.producto {
   border: 2px solid #4D9906;
 }
 
-
-
-/* .flex-item footer,
-.flex-item header {
-  width: 100%;
-  position: relative;
-  box-sizing: border-box;
-  height: 15%;
-  background-color: #ddd;
-} */
-/* 
-.flex-item footer {
-  padding-top: 10px;
-} */
-/* 
-.flex-item a div {
-  position: relative;
-  overflow: hidden;
-} */
-/* 
-.flex-item img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: fit;
-} */
 
 p {
   position: absolute;
@@ -252,13 +214,24 @@ p {
 
 /* Modal Content/Box */
 .modal-content {
-  background-color: #fefefe;
+  background-color: #ddd;
   margin: 15% auto;
   /* 15% from the top and centered */
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
   /* Could be more or less, depending on screen size */
+}
+.form-buttons{
+      padding: 5px 10px;
+        border: solid 2px #4CAF50;
+        border-radius: 50px;
+}
+.modal-content p{
+  position: static;
+  font-size: 19px;
+  align-self: center;
+
 }
 
 /* The Close Button */
@@ -268,6 +241,11 @@ p {
   font-size: 28px;
   font-weight: bold;
 }
+form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 .close:hover,
 .close:focus {
@@ -276,28 +254,7 @@ p {
   cursor: pointer;
 }
 
-@media (max-width: 768px) {
-  #opciones-nav{
-    display: none;
-  }
-  #menu-hamburguesa {
-      display: block;
-      align-self: center;
-      height: 30px;
-    }
-    
-}
 
-@media (prefers-color-scheme: dark) {
-
-  body,
-  .flex-item {
-    background-color: #222;
-    color: #fff;
-  }
-
-
-}
 
 
 
@@ -343,4 +300,29 @@ p {
   color: rgb(255, 255, 255);
   text-align: center;
   height: 29%;
+}
+
+
+@media (max-width: 768px) {
+  #opciones-nav {
+    display: none;
+  }
+
+  #menu-hamburguesa {
+    display: block;
+    align-self: center;
+    height: 30px;
+  }
+
+}
+
+@media (prefers-color-scheme: dark) {
+
+  body,
+  .flex-item,.modal-content {
+    background-color: #222;
+    color: #fff;
+  }
+
+
 }

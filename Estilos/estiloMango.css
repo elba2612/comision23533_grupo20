@@ -58,11 +58,10 @@ section {
 
 }
 
-.flex-container {
+.grid-container {
     display: grid;
-    flex-template-columns: repeat(auto-fit,
-            minmax(300px, 1fr));
-    flex-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
 }
 
 .item {
@@ -90,8 +89,8 @@ section {
 
 /* Estilos para dispositivos móviles */
 @media (max-width: 767px) {
-    .flex-container {
-        flex-template-columns: 1fr;
+    .grid-container {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -113,6 +112,9 @@ footer a {
     text-decoration: none;
     color: #000;
 }
+
+
+
 
 @media (prefers-color-scheme: dark) {
     .item {
