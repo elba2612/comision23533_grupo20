@@ -63,8 +63,15 @@ h2 {
     align-items: center;
     justify-content: center;
 }
-#precio{
+
+#busqueda-y-precio {
+    display: flex;
+    align-items: center;
+}
+
+#precio {
     display: inline;
+    font-size: 1.5vw;
 }
 
 
@@ -164,7 +171,7 @@ nav.caja {
     width: 70%;
     max-width: 200px;
     background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E") no-repeat;
-    background-position: bottom 5px right 15px;
+    background-position: bottom 50% right 8%;
 }
 
 
@@ -195,8 +202,8 @@ main {
     align-items: center;
     justify-content: center;
     flex: 1;
-    width: 100%;  
-    background-color: #ddd; 
+    width: 100%;
+    background-color: #ddd;
 }
 
 .main img {
@@ -206,11 +213,14 @@ main {
 
 #responsive-video {
     width: 80%;
-    height: 70vh; /* El video ocupará el 70% de la altura de la ventana */
-    max-height: 90%; /* Para limitar la altura del video al 90% de la ventana */
-    max-width: 100%; /* Para limitar el ancho del video al 100% de la ventana */
+    height: 70vh;
+    /* El video ocupará el 70% de la altura de la ventana */
+    max-height: 90%;
+    /* Para limitar la altura del video al 90% de la ventana */
+    max-width: 100%;
+    /* Para limitar el ancho del video al 100% de la ventana */
     background-color: #ddd;
-    }
+}
 
 
 footer {
@@ -242,7 +252,9 @@ footer a {
         color: #000;
     }
 
-    body {
+    body,
+    main,
+    #responsive-video {
         background-color: #222;
     }
 
@@ -282,13 +294,17 @@ footer a {
     #contenedor-busqueda-nav {
         display: flex;
         flex-direction: row;
-        align-items: center;
+        align-items: start;
         justify-content: space-evenly;
     }
 
+    #nav {
+        align-self: flex-start;
+    }
+
+
     #busqueda {
         height: 8vw;
-        background-position: bottom 8px right 15px;
     }
 
     .menu {
@@ -310,8 +326,9 @@ footer a {
         height: 100%;
     }
 
-
-
+    #precio {
+        font-size: 2.5vw;
+    }
 
     .submenu {
         top: 0%;
@@ -374,4 +391,3 @@ footer a {
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 }
-
