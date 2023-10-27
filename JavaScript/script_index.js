@@ -62,6 +62,7 @@ var requestOptions = {
     redirect: 'follow'
 };
 let apiFuncionando = false;
+let res=1000.00
 
 if (apiFuncionando) {
     fetch("https://www.goldapi.io/api/XAU/USD", requestOptions)
@@ -69,14 +70,16 @@ if (apiFuncionando) {
         .then(result => {
             const res = JSON.parse(result)
             console.log(res)
-            document.querySelector('#precio').textContent = `Precio del oro: $${(res.open_price).toFixed(2)} por onza de oro`;
+            document.querySelector('#precio').textContent = `Precio del oro: $${(res.open_price).toFixed(2)} por onza de oro 
+            Por lo tanto, el valor del mango es US$${res / 10000}`;
         })
         .catch(error => console.log('error', error));
 } else {
-    document.querySelector('#precio').textContent = `Precio del oro: $xxxx.xx por onza de oro`;
+    document.querySelector('#precio').textContent = `Precio del oro: $xxxx.xx por onza de oro 
+    Por lo tanto, el valor del mango es US$${res / 10000}`;
 }
 
-
+ 
 
 
 

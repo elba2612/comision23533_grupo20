@@ -72,6 +72,7 @@ h2 {
 #precio {
     display: inline;
     font-size: 1.5vw;
+    margin: auto 15px;
 }
 
 
@@ -300,6 +301,7 @@ footer a {
 
     #nav {
         align-self: flex-start;
+
     }
 
 
@@ -322,7 +324,7 @@ footer a {
         width: auto;
         border-radius: 20px;
         flex-direction: column;
-        grid-row-start: 2;
+        flex-row-start: 2;
         height: 100%;
     }
 
@@ -354,7 +356,7 @@ footer a {
 
     nav.para-hamburguesa {
         height: 35vw;
-        width: fit-content;
+        width: 50vw;
         margin: 5px;
         border-radius: 10px;
         display: flex;

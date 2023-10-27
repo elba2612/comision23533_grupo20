@@ -52,16 +52,16 @@ section {
 }
 
 .logo {
-        width: 18vw;
-        margin-right: 10px;
-    
+    width: 18vw;
+    margin-right: 10px;
+
 }
 
-.grid-container {
+.flex-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit,
+    flex-template-columns: repeat(auto-fit,
             minmax(300px, 1fr));
-    grid-gap: 20px;
+    flex-gap: 20px;
 }
 
 .item {
@@ -75,7 +75,8 @@ section {
 .video-container {
     position: relative;
     overflow: hidden;
-    padding-top: 56.25%; /* Proporción 16:9 (ajusta esto según la relación de aspecto del video) */
+    padding-top: 56.25%;
+    /* Proporción 16:9 (ajusta esto según la relación de aspecto del video) */
 }
 
 .video-container iframe {
@@ -88,8 +89,8 @@ section {
 
 /* Estilos para dispositivos móviles */
 @media (max-width: 767px) {
-    .grid-container {
-        grid-template-columns: 1fr;
+    .flex-container {
+        flex-template-columns: 1fr;
     }
 }
 
