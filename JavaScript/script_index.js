@@ -75,7 +75,7 @@ if (apiFuncionando) {
         })
         .catch(error => console.log('error', error));
 } else {
-    document.querySelector('#precio').textContent = `Precio del oro: $xxxx.xx por onza de oro 
+    document.querySelector('#precio').textContent = `Precio del oro: $${(res.open_price).toFixed(2)} por onza de oro 
     Por lo tanto, el valor del mango es US$${res / 10000}`;
 }
 
