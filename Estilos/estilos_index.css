@@ -37,18 +37,7 @@ img {
     min-height: 100vh;
     max-height: calc(100svh + 4.4vw);
 }
-.flex-container {
-  display: flex;
-  background-color: #fea500;
-  flex-direction: row;
-  flex-wrap: wrap;
 
-  /* Crea columnas flexibles */
-  gap: 10px;
-  /* Espacio entre las imágenes */
-  padding: 20px;
-  height: fit-content;
-}
 header.producto {
   font-size: 15px;
 }
@@ -168,7 +157,18 @@ h2 {
     margin: auto 15px;
 }
 
+.visible.para-caja{
+  display: flex;
+  background-color: #fea500;
+  flex-direction: row;
+  flex-wrap: wrap;
 
+  /* Crea columnas flexibles */
+  gap: 10px;
+  /* Espacio entre las imágenes */
+  padding: 20px;
+  height: fit-content;
+}
 #menu-hamburguesa {
     display: none;
 }
