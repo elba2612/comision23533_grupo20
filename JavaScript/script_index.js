@@ -12,9 +12,9 @@ class Articulo {
 }
 
 
-var art1=new Articulo("../Sources/Bici2.jpeg", "Bicicleta rodado 26", "Casi nueva", "126");
-var art2=new Articulo("../Sources/tv.jpg", "Tv 32 pulgadas", "Usada, en buen estado", "150");
-var art3=new Articulo("../Sources/YerbaSalus2.jpg", "Yerba Salus 1Kg", "Bulto por 10 paquetes", "30");
+var art1=new Articulo("Sources/Bici2.jpeg", "Bicicleta rodado 26", "Casi nueva", "126");
+var art2=new Articulo("Sources/tv.jpg", "Tv 32 pulgadas", "Usada, en buen estado", "150");
+var art3=new Articulo("Sources/YerbaSalus2.jpg", "Yerba Salus 1Kg", "Bulto por 10 paquetes", "30");
 var articulos=[art1,art2,art3];
 
 function dibujar(arts){
