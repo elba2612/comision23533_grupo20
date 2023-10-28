@@ -45,12 +45,6 @@ busqueda.addEventListener('keydown', (e) => {
             dibujar(articulos);
         }
     }
-    //console.log(busqueda.value);
-    //console.log(busqueda.value.length);
-    //let cuadro = document.getElementsByClassName('caja-busqueda');
-    //cuadro[0].classList.toggle('visible', busqueda.value.length != 0)
-    //cuadro[0].classList.toggle('para-caja', busqueda.value.length != 0)
-    
 })
 busqueda.addEventListener('input', () => {
     console.log(busqueda.value);
