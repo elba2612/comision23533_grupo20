@@ -2,6 +2,18 @@ const section = document.querySelector('.flex-container');
 const wide = window.matchMedia("(min-width: 768px");
 
 
+function wideSize(wide) {
+    let nav = document.getElementsByTagName('nav');
+    let menu = document.getElementById('opciones-nav');
+    if (wide.matches) {
+        menu.style.display='flex'
+    } else {
+        menu.style.display = 'none';
+       
+    }
+}
+wideSize(wide);
+wide.addListener(wideSize);
 function crearArticulo(img, textoHeader, textoFooter, textoPrecio) {
     let art = document.createElement('article');
     art.classList.add('flex-item');
@@ -91,7 +103,6 @@ document.body.addEventListener('click', (e) => {
         }
     }
 })
-
 
 
 
