@@ -1,8 +1,28 @@
+class Articulo {
+    img;
+    textoHeader;
+    textoFooter;
+    textoPrecio;
+    constructor(img, textoHeader, textoFooter, textoPrecio) {
+        this.img = img;
+        this.textoFooter = textoFooter;
+        this.textoHeader = textoHeader;
+        this.textoPrecio = textoPrecio;
+    }
+}
+
+
 const busqueda = document.getElementById('busqueda');
 busqueda.addEventListener('input', () => {
     let cuadro = document.getElementsByClassName('caja-busqueda');
     cuadro[0].classList.toggle('visible', busqueda.value.length != 0)
     cuadro[0].classList.toggle('para-caja', busqueda.value.length != 0)
+})
+busqueda.addEventListener('keyup', (e) => {
+    e.preventDefault();
+    if (e.key==13){
+        console.log('a')
+    }
 })
 
 function sleep(ms) {
@@ -62,7 +82,7 @@ var requestOptions = {
     redirect: 'follow'
 };
 let apiFuncionando = false;
-let res=1000.00
+let res = 1000.00
 
 if (apiFuncionando) {
     fetch("https://www.goldapi.io/api/XAU/USD", requestOptions)
@@ -79,7 +99,7 @@ if (apiFuncionando) {
     Por lo tanto, el valor del mango es US$${res / 10000}`;
 }
 
- 
+
 
 
 
