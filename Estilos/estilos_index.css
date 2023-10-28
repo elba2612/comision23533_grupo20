@@ -64,6 +64,7 @@ header.producto {
 
 .image-info {
   position: absolute;
+  box-sizing:border-box;
   bottom: 0;
   left: 0;
   right: 0;
