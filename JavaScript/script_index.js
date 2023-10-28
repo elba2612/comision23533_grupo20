@@ -39,9 +39,11 @@ function dibujar(arts){
 const busqueda = document.getElementById('busqueda');
 const  busquedaYPrecio=document.getElementById('busqueda-y-precio');
 busqueda.addEventListener('keydown', (e) => {
-    if (busqueda.value.length!=0&&e.keyCode==13){
+    if (e.keyCode==13){
         e.preventDefault();
-        dibujar(arts);
+        if (busqueda.value.length!=0){
+            dibujar(arts);
+        }
     }
     console.log(e.keyCode);
     let cuadro = document.getElementsByClassName('caja-busqueda');
