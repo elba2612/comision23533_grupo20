@@ -42,7 +42,7 @@ busqueda.addEventListener('keydown', (e) => {
     if (e.keyCode==13){
         e.preventDefault();
         if (busqueda.value.length!=0){
-            dibujar(arts);
+            dibujar(articulos);
         }
     }
     console.log(e.keyCode);
