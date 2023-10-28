@@ -12,16 +12,22 @@ class Articulo {
 }
 
 
+var art1=new Articulo("../Sources/Bici2.jpeg", "Bicicleta rodado 26", "Casi nueva", "126");
+var art2=new Articulo("../Sources/tv.jpg", "Tv 32 pulgadas", "Usada, en buen estado", "150");
+var art3=new Articulo("../Sources/YerbaSalus2.jpg", "Yerba Salus 1Kg", "Bulto por 10 paquetes", "30");
+var articulos=[art1,art2,art3];
+
+
 const busqueda = document.getElementById('busqueda');
-busqueda.addEventListener('input', () => {
+const  busquedaYPrecio=document.getElementById('busqueda-y-precio');
+busqueda.addEventListener('keydown', (e) => {
+    e.preventDefault();
+    console.log(e.keyCode);
     let cuadro = document.getElementsByClassName('caja-busqueda');
     cuadro[0].classList.toggle('visible', busqueda.value.length != 0)
     cuadro[0].classList.toggle('para-caja', busqueda.value.length != 0)
-})
-busqueda.addEventListener('keyup', (e) => {
-    e.preventDefault();
-    if (e.key==13){
-        console.log('a')
+    if (busqueda.value.length!=0&&e.keyCode==13){
+        console.log(articulos)
     }
 })
 
