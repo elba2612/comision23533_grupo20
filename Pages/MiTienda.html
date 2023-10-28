@@ -39,20 +39,20 @@
                 <form action="" method="post">
                     <section class="form-grupos">
                         <label for="titulo">Titulo:</label>
-                        <input type="text" name="titulo"  id="titulo" required>
+                        <input type="text" name="titulo"  id="titulo-agregar" required>
                     </section>
                     <section class="form-grupos">
                         <label for="descripcion">Descripción:</label>
-                        <input type="text" name="descripcion"  id="descripcion" required>
+                        <input type="text" name="descripcion"  id="descripcion-agregar" required>
                     </section>
                 
                     <section class="form-grupos">
                         <label for="fotos">Fotos:</label>
-                        <input type="file" name="fotos" id="fotos" accept="image/png, image/jpeg" required>
+                        <input type="file" name="fotos" id="fotos-agregar" accept="image/png, image/jpeg" required>
                     </section>
                     <section>
                         <label for="precio">Precio:</label>
-                        <input type="number" name="precio" id="precio">
+                        <input type="number" name="precio" id="precio-agregar">
                     </section>
 
                     <input class="form-buttons" type="submit" value="GUARDAR">
@@ -66,20 +66,20 @@
                 <form action="" method="post">
                     <section class="form-grupos">
                         <label for="titulo">Titulo:</label>
-                        <input type="text" name="titulo" id="titulo" required>
+                        <select name="titulo" id="titulo-editar"></select>
                     </section>
                     <section class="form-grupos">
                         <label for="descripcion">Descripción:</label>
-                        <input type="text" name="descripcion" id="descripcion" required>
+                        <input type="text" name="descripcion" id="descripcion-editar" required>
                     </section>
                 
                     <section class="form-grupos">
                         <label for="fotos">Fotos:</label>
-                        <input type="file" name="fotos" id="fotos" accept="image/png, image/jpeg" required>
+                        <input type="file" name="fotos" id="fotos-editar" accept="image/png, image/jpeg" required>
                     </section>
                     <section>
                         <label for="precio">Precio:</label>
-                        <input type="number" name="precio" id="precio">
+                        <input type="number" name="precio" id="precio-editar">
                     </section>
                 
                     <input class="form-buttons" type="submit" value="GUARDAR">
@@ -90,8 +90,8 @@
             <div class="modal-content">
                 <span class="close">&times;</span>
                 <p>Eliminar producto</p>
-                Estas seguro?
-
+                Seleccione producto a eliminar: 
+                
             </div>
         </div>
 

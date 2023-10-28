@@ -40,6 +40,33 @@ for (let i = 0; i < spans.length; i++) {
     })
 
 }
+
+document.querySelector('#boton-eliminar').addEventListener('click', () => {
+    let prods = document.querySelectorAll('.flex-item');
+    let res = "";
+    for (let i = 0; i < prods.length; i++) {
+        res += `<option value="value${i}">${prods[i].firstChild.childNodes[3].childNodes[1].textContent}</option>`;
+    }
+    console.log(document.querySelector('#modal-eliminar').childNodes[1])
+    document.querySelector('#modal-eliminar').childNodes[1].innerHTML = `<span class="close">&times;</span>
+                <p>Eliminar producto</p>
+                Seleccione producto a eliminar: 
+    <select name="select">
+ ${res}
+ </select>
+ <button>Eliminar</button>`
+})
+document.querySelector('#boton-editar').addEventListener('click', () => {
+    let prods = document.querySelectorAll('.flex-item');
+    let res = "";
+    for (let i = 0; i < prods.length; i++) {
+        res += `<option value="value${i}">${prods[i].firstChild.childNodes[3].childNodes[1].textContent}</option>`;
+    }
+    console.log(document.querySelector('#modal-editar').childNodes[1])
+    document.querySelector('#titulo-editar').innerHTML = `
+ ${res}
+ `
+})
 document.body.addEventListener('click', (e) => {
     if (!wide.matches) {
         let ids = [];
