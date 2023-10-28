@@ -17,13 +17,31 @@ var art2=new Articulo("../Sources/tv.jpg", "Tv 32 pulgadas", "Usada, en buen est
 var art3=new Articulo("../Sources/YerbaSalus2.jpg", "Yerba Salus 1Kg", "Bulto por 10 paquetes", "30");
 var articulos=[art1,art2,art3];
 
+function dibujar(arts){
+    let box=document.getElementById('box');
+    box.innerHtml='';
+    for (let i=0;i<arts.length;i++){
+        box.innerHtml+=`<article>
+        <a href=${arts[i].img}>
+            <img src=${arts[i].img} alt="Imagen de producto">
+                <header class="image-header">
+                    <h2 class="image-title1">${arts[i].textoHeader}</h2>
+                </header>
+                <footer class="image-info">
+                    <h2 class="image-title2">${arts[i].textoFooter}</h2>
+                    <p class="image-description">ლ${arts[i].textoPrecio}</p>
+                </footer>
+        </a>
+        </article>`
+    }
+}
 
 const busqueda = document.getElementById('busqueda');
 const  busquedaYPrecio=document.getElementById('busqueda-y-precio');
 busqueda.addEventListener('keydown', (e) => {
     if (busqueda.value.length!=0&&e.keyCode==13){
         e.preventDefault();
-        console.log(articulos)
+        dibujar(arts);
     }
     console.log(e.keyCode);
     let cuadro = document.getElementsByClassName('caja-busqueda');
