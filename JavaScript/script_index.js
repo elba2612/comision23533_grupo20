@@ -21,7 +21,7 @@ function dibujar(arts){
     let box=document.getElementById('box');
     box.innerHTML='';
     for (let i=0;i<arts.length;i++){
-        box.innerHTML+=`<article>
+        box.innerHTML+=`<article class="flex-item">
         <a href=${arts[i].img}>
             <img src=${arts[i].img} alt="Imagen de producto">
                 <header class="image-header">
