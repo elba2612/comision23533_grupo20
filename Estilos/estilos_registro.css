@@ -1,6 +1,12 @@
+*{
+    box-sizing: border-box;
+}
 form section,
 form button {
     margin: 0 auto;
+}
+form{
+    width: 40%;
 }
 
 body {
@@ -10,10 +16,7 @@ body {
     font-family: "Glacial Indifference";
 }
 
-.form-grupos {
-    margin-bottom: 15px;
-    /* Añade espacio entre grupos de elementos */
-}
+
 
 label {
     display: block;
@@ -31,6 +34,7 @@ input {
     /* Añade un borde a los campos de entrada */
     border-radius: 5px;
     /* Añade esquinas redondeadas a los campos de entrada */
+    margin-bottom: 15px;
 }
 
 .form-buttons {

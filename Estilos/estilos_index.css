@@ -324,7 +324,7 @@ footer a {
         width: auto;
         border-radius: 20px;
         flex-direction: column;
-        flex-row-start: 2;
+        grid-row-start: 2;
         height: 100%;
     }
 
@@ -356,7 +356,7 @@ footer a {
 
     nav.para-hamburguesa {
         height: 35vw;
-        width: 50vw;
+        width: 70vw;
         margin: 5px;
         border-radius: 10px;
         display: flex;
@@ -376,7 +376,9 @@ footer a {
         padding: 2px;
     }
 
-
+    nav.para-hamburguesa{
+        width: 80vw;
+    }
 
 
     header {
