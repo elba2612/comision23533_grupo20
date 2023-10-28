@@ -21,13 +21,15 @@ var articulos=[art1,art2,art3];
 const busqueda = document.getElementById('busqueda');
 const  busquedaYPrecio=document.getElementById('busqueda-y-precio');
 busqueda.addEventListener('keydown', (e) => {
+    if (busqueda.value.length!=0&&e.keyCode==13){
+        e.preventDefault();
+        console.log(articulos)
+    }
     console.log(e.keyCode);
     let cuadro = document.getElementsByClassName('caja-busqueda');
     cuadro[0].classList.toggle('visible', busqueda.value.length != 0)
     cuadro[0].classList.toggle('para-caja', busqueda.value.length != 0)
-    if (busqueda.value.length!=0&&e.keyCode==13){
-        console.log(articulos)
-    }
+    
 })
 
 function sleep(ms) {
