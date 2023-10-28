@@ -55,7 +55,7 @@ header.producto {
   overflow: hidden;
   border: 2px solid #4D9906;
 }
-p {
+.image-description {
   position: absolute;
   bottom: 1px;
   left: 10%;
