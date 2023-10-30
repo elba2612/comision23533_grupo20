@@ -13,7 +13,7 @@ class Articulo {
 
 
 const section = document.querySelector('.flex-container');
-const wide = window.matchMedia("(min-width: 768px");
+const wide = window.matchMedia("(min-width: 701px");
 
 
 function wideSize(wide) {
@@ -96,6 +96,9 @@ document.querySelector('#boton-editar').addEventListener('click', () => {
     document.querySelector('#titulo-editar').innerHTML = `
  ${res}
  `
+})
+document.querySelector('#boton-salir').addEventListener('click', () => {
+    location.replace("../index.html")
 })
 document.body.addEventListener('click', (e) => {
     if (!wide.matches) {

@@ -26,6 +26,7 @@ nav {
 }
 
 #opciones-nav {
+  font-size: 16px;
   flex-grow: 1;
   display: flex;
   flex-direction: row;
@@ -328,8 +329,12 @@ form{
   height: 29%;
 }
 
-
-@media (max-width: 768px) {
+@media (max-width: 800px) {
+  #opciones-nav {
+    font-size: 13px;
+  }
+}
+@media (max-width: 700px) {
   #opciones-nav {
     display: none;
   }

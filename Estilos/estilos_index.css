@@ -191,6 +191,7 @@ h2 {
 }
 
 #busqueda-y-precio {
+    margin-top: 5px;
     display: flex;
     align-items: center;
     flex-direction: row;
@@ -232,7 +233,7 @@ nav.caja {
 }
 
 .boton-nav {
-    padding: 5px 10px;
+    padding: 2px 10px;
     font-size: 1.4vw;
     border-radius: 25px;
 }
