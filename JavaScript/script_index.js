@@ -1,8 +1,59 @@
+class Articulo {
+    img;
+    textoHeader;
+    textoFooter;
+    textoPrecio;
+    constructor(img, textoHeader, textoFooter, textoPrecio) {
+        this.img = img;
+        this.textoFooter = textoFooter;
+        this.textoHeader = textoHeader;
+        this.textoPrecio = textoPrecio;
+    }
+}
+
+
+var art1=new Articulo("Sources/Bici2.jpeg", "Bicicleta rodado 26", "Casi nueva", "126");
+var art2=new Articulo("Sources/tv.jpg", "Tv 32 pulgadas", "Usada, en buen estado", "150");
+var art3=new Articulo("Sources/YerbaSalus2.jpg", "Yerba Salus 1Kg", "Bulto por 10 paquetes", "30");
+var articulos=[art1,art2,art3];
+
+function dibujar(arts){
+    let box=document.getElementById('box');
+    box.innerHTML='';
+    for (let i=0;i<arts.length;i++){
+        box.innerHTML+=`<article class="flex-item">
+        <a href=${arts[i].img}>
+            <img src=${arts[i].img} alt="Imagen de producto">
+                <header class="image-header">
+                    <h2 class="image-title1">${arts[i].textoHeader}</h2>
+                </header>
+                <footer class="image-info">
+                    <h2 class="image-title2">${arts[i].textoFooter}</h2>
+                    <p class="image-description">ლ${arts[i].textoPrecio}</p>
+                </footer>
+        </a>
+        </article>`
+    }
+}
+
 const busqueda = document.getElementById('busqueda');
+const  busquedaYPrecio=document.getElementById('busqueda-y-precio');
+busqueda.addEventListener('keydown', (e) => {
+    if (e.keyCode==13){
+        e.preventDefault();
+        if (busqueda.value.length!=0){
+            dibujar(articulos);
+        }
+    }
+})
 busqueda.addEventListener('input', () => {
+    console.log(busqueda.value);
+    console.log(busqueda.value.length);
+    dibujar([]);
     let cuadro = document.getElementsByClassName('caja-busqueda');
     cuadro[0].classList.toggle('visible', busqueda.value.length != 0)
     cuadro[0].classList.toggle('para-caja', busqueda.value.length != 0)
+    
 })
 
 function sleep(ms) {
@@ -62,6 +113,7 @@ var requestOptions = {
     redirect: 'follow'
 };
 let apiFuncionando = false;
+let res = 1000.00
 
 if (apiFuncionando) {
     fetch("https://www.goldapi.io/api/XAU/USD", requestOptions)
@@ -69,11 +121,13 @@ if (apiFuncionando) {
         .then(result => {
             const res = JSON.parse(result)
             console.log(res)
-            document.querySelector('#precio').textContent = `Precio del oro: $${(res.open_price).toFixed(2)} por onza de oro`;
+            document.querySelector('#precio').textContent = `Precio del oro: $${(res.open_price).toFixed(2)} por onza de oro 
+            Por lo tanto, el valor del mango es US$${res / 10000}`;
         })
         .catch(error => console.log('error', error));
 } else {
-    document.querySelector('#precio').textContent = `Precio del oro: $xxxx.xx por onza de oro`;
+    document.querySelector('#precio').textContent = `Precio del oro: $${(res).toFixed(2)} por onza de oro 
+    Por lo tanto, el valor del mango es US$${res / 10000}`;
 }
 
 

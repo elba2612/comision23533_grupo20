@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -7,6 +7,7 @@
     <script src="https://kit.fontawesome.com/62ea397d3a.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../Estilos/estilos_registro.css">
     <title>Registro usuario Valioso Mango</title>
+    <link rel="icon" href="../Sources/Favicon (16 x 16px).svg" type="image/x-icon">
 </head>
 
 <body class="formulario_registro">
@@ -23,12 +24,9 @@
 
     </header>
     <main>
-        <form action="achivodeprocesamiento.php" method="post">
-            <section class="form-grupos">
+        <form  method="post">
                 <label for="nombre">Nombre de Usuario:</label>
                 <input type="text" name="nombre" id="nombre" required>
-            </section>
-            <section class="form-grupos">
                 <label for="password">Contraseña:</label>
                 <input type="password" name="pass" id="password" required>
                 <div id="check-recuerdame">
@@ -36,11 +34,9 @@
                     <label for="recordarme" id="recuerdame">Recuérdame</label>
                 </div>
                 <a id="olvidaste" href="#">Olvidaste tu contraseña?</a>
-            </section>
-            <section class="form-buttons">
-                <input type="submit" value="Enviar">
-            </section>
+                <input type="submit" value="Enviar" id="enviar">
     </main>
 </body>
+<script src="../JavaScript/script_ingreso.js"></script>
 
 </html>
