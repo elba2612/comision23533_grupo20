@@ -113,7 +113,7 @@ var requestOptions = {
     redirect: 'follow'
 };
 let apiFuncionando = false;
-let res = 1000.00
+let res = 1651.651
 
 if (apiFuncionando) {
     fetch("https://www.goldapi.io/api/XAU/USD", requestOptions)

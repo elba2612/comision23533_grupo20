@@ -54,6 +54,37 @@ header.producto {
   border-radius: 5px;
   overflow: hidden;
   border: 2px solid #4D9906;
+
+transition: transform 0.2s;
+    -webkit-animation: out 0.2s forwards;
+    animation: out 0.2s forwards;
+}
+.flex-item:hover {
+    transform: scale(1.03);
+    transition: transform 0.2s;
+    -webkit-animation: in 0.2s forwards;
+    animation: in 0.2s forwards;
+}
+
+@keyframes in {
+    from {
+        box-shadow: 0px 0px 5px #222;
+    }
+
+    to {
+        box-shadow: 9px 7px 10px #222;
+    }
+}
+
+@keyframes out {
+    from {
+        box-shadow: 9px 7px 10px #222;
+
+    }
+
+    to {
+        box-shadow: 0px 0px 5px #222;
+    }
 }
 .image-description {
   position: absolute;
