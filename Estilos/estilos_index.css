@@ -1,13 +1,14 @@
 .flex-item a {
-  height: 60%;
-  width: 90%;
+    height: 60%;
+    width: 90%;
 }
+
 .marco {
-  display: block;
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-  border: #f2460b solid 1px;
+    display: block;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    border: #f2460b solid 1px;
 }
 
 body {
@@ -18,8 +19,14 @@ body {
     height: 100svh;
 
 }
+
+#precios {
+    display: flex;
+    flex-direction: row;
+}
+
 img {
-  position: relative;
+    position: relative;
 }
 
 .caja {
@@ -39,26 +46,29 @@ img {
 }
 
 header.producto {
-  font-size: 15px;
+    font-size: 15px;
 }
-.flex-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.flex-item {
-  position: relative;
-  height: 280px;
-  width: 280px;
-  background-color: lightgray;
-  border-radius: 5px;
-  overflow: hidden;
-  border: 2px solid #4D9906;
 
-transition: transform 0.2s;
+.flex-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.flex-item {
+    position: relative;
+    height: 280px;
+    width: 280px;
+    background-color: lightgray;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 2px solid #4D9906;
+
+    transition: transform 0.2s;
     -webkit-animation: out 0.2s forwards;
     animation: out 0.2s forwards;
 }
+
 .flex-item:hover {
     transform: scale(1.03);
     transition: transform 0.2s;
@@ -86,57 +96,59 @@ transition: transform 0.2s;
         box-shadow: 0px 0px 5px #222;
     }
 }
+
 .image-description {
-  position: absolute;
-  bottom: 1px;
-  left: 10%;
+    position: absolute;
+    bottom: 1px;
+    left: 10%;
 
 }
 
 .image-info {
-  position: absolute;
-  box-sizing:border-box;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: rgba(0, 0, 0, 0.7);
-  padding: 10px;
-  color: white;
-  text-align: center;
-  display: flex;
-  align-items: center;
+    position: absolute;
+    box-sizing: border-box;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
 }
 
 .image-title1 {
-  font-size: 2em;
-  margin: 0;
+    font-size: 2em;
+    margin: 0;
 }
 
 .image-title2 {
-  font-size: 1em;
-  margin: 0;
-  flex-grow: 1;
+    font-size: 1em;
+    margin: 0;
+    flex-grow: 1;
 }
 
 .image-description {
-  font-size: 1.4em;
-  margin: 0;
-  position: static;
-  align-self: flex-end;
+    font-size: 1.4em;
+    margin: 0;
+    position: static;
+    align-self: flex-end;
 }
 
 .image-header {
-  position: absolute;
-  font-size: 13px;
-  top: 0;
-  left: 0;
-  right: 0;
-  background-color: rgba(0, 0, 0, 0.7);
-  padding: 10px;
-  color: rgb(255, 255, 255);
-  text-align: center;
-  height: 29%;
+    position: absolute;
+    font-size: 13px;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    height: 29%;
 }
+
 .svg {
     margin-right: 6px;
 }
@@ -181,26 +193,30 @@ h2 {
 #busqueda-y-precio {
     display: flex;
     align-items: center;
+    flex-direction: row;
 }
 
-#precio {
+#precio-dolar,
+#precio-peso,
+#precio-oro {
     display: inline;
     font-size: 1.5vw;
-    margin: auto 15px;
+    margin: 5px 3px;
 }
 
-.visible.para-caja{
-  display: flex;
-  background-color: #fea500;
-  flex-direction: row;
-  flex-wrap: wrap;
+.visible.para-caja {
+    display: flex;
+    background-color: #fea500;
+    flex-direction: row;
+    flex-wrap: wrap;
 
-  /* Crea columnas flexibles */
-  gap: 10px;
-  /* Espacio entre las imágenes */
-  padding: 20px;
-  height: fit-content;
+    /* Crea columnas flexibles */
+    gap: 10px;
+    /* Espacio entre las imágenes */
+    padding: 20px;
+    height: fit-content;
 }
+
 #menu-hamburguesa {
     display: none;
 }
@@ -379,7 +395,8 @@ footer a {
     }
 
     body,
-    main,.flex-item,
+    main,
+    .flex-item,
     #responsive-video {
         background-color: #222;
     }
@@ -405,6 +422,18 @@ footer a {
 
     footer p {
         font-size: 3vw;
+    }
+
+    #busqueda-y-precio {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #precio-dolar,
+    #precio-peso,
+    #precio-oro {
+        font-size: 2.5vw;
     }
 }
 
@@ -453,8 +482,14 @@ footer a {
         height: 100%;
     }
 
-    #precio {
-        font-size: 2.5vw;
+    #precios {
+        flex-direction: column;
+    }
+
+    #precio-dolar,
+    #precio-peso,
+    #precio-oro {
+        font-size: 2.8vw;
     }
 
     .submenu {
@@ -482,8 +517,8 @@ footer a {
     nav.para-hamburguesa {
         height: 35vw;
         width: 70vw;
-        margin: 5px;
-        border-radius: 10px;
+
+        border-radius: 20px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -495,13 +530,17 @@ footer a {
 @media only screen and (max-width: 350px) {
 
 
+
     .boton-nav,
-    .submenu {
-        font-size: 3vw;
+    .submenu,
+    #precio-dolar,
+    #precio-peso,
+    #precio-oro {
+        font-size: 3.2vw;
         padding: 2px;
     }
 
-    nav.para-hamburguesa{
+    nav.para-hamburguesa {
         width: 80vw;
     }
 
