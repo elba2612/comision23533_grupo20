@@ -47,8 +47,6 @@ busqueda.addEventListener('keydown', (e) => {
     }
 })
 busqueda.addEventListener('input', () => {
-    console.log(busqueda.value);
-    console.log(busqueda.value.length);
     dibujar([]);
     let cuadro = document.getElementsByClassName('caja-busqueda');
     cuadro[0].classList.toggle('visible', busqueda.value.length != 0)
@@ -121,7 +119,6 @@ if (apiFuncionando) {
         .then(response => response.text())
         .then(result => {
             let res = JSON.parse(result)
-            console.log(res)
             precioOro = res.open_price;
             precioDolar=precioOro/10000;
             document.querySelector('#precio-oro').textContent = `Precio por onza de oro en USD $${(precioOro).toFixed(2)}`;
@@ -136,7 +133,6 @@ if (apiFuncionando) {
 fetch("https://dolarapi.com/v1/dolares/blue")
     .then(response => response.json())
     .then(data => {
-        console.log(data);
         precioArs=precioDolar*data.compra;
         document.querySelector('#precio-peso').textContent = `Valor del mango en ARS: $${precioArs.toFixed(2)}`
     });

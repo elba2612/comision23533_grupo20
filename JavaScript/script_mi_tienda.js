@@ -93,7 +93,6 @@ document.querySelector('#boton-editar').addEventListener('click', () => {
     for (let i = 0; i < prods.length; i++) {
         res += `<option value="value${i}">${prods[i].firstChild.childNodes[3].childNodes[1].textContent}</option>`;
     }
-    console.log(document.querySelector('#modal-editar').childNodes[1])
     document.querySelector('#titulo-editar').innerHTML = `
  ${res}
  `
@@ -115,7 +114,6 @@ document.body.addEventListener('click', (e) => {
         if (esId && opciones.style.display != 'block') {
             opciones.style.display = 'block';
         } else if (esId && opciones.style.display == 'block') {
-            console.log('esta');
             opciones.style.display = 'none';
         } else {
             opciones.style.display = 'none';
