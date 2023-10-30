@@ -21,7 +21,7 @@ busqueda.addEventListener('input', () => {
 busqueda.addEventListener('keyup', (e) => {
     e.preventDefault();
     if (e.key==13){
-        console.log('a')
+        console.log('a') ///TODO
     }
 })
 
