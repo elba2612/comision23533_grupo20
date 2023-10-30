@@ -112,7 +112,7 @@ var requestOptions = {
     headers: myHeaders,
     redirect: 'follow'
 };
-let apiFuncionando = true;
+let apiFuncionando = false;
 let res = 1000.00
 
 if (apiFuncionando) {
