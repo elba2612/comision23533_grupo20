@@ -12,17 +12,48 @@ class Articulo {
 }
 
 
+var art1=new Articulo("Sources/Bici2.jpeg", "Bicicleta rodado 26", "Casi nueva", "126");
+var art2=new Articulo("Sources/tv.jpg", "Tv 32 pulgadas", "Usada, en buen estado", "150");
+var art3=new Articulo("Sources/YerbaSalus2.jpg", "Yerba Salus 1Kg", "Bulto por 10 paquetes", "30");
+var articulos=[art1,art2,art3];
+
+function dibujar(arts){
+    let box=document.getElementById('box');
+    box.innerHTML='';
+    for (let i=0;i<arts.length;i++){
+        box.innerHTML+=`<article class="flex-item">
+        <a href=${arts[i].img}>
+            <img src=${arts[i].img} alt="Imagen de producto">
+                <header class="image-header">
+                    <h2 class="image-title1">${arts[i].textoHeader}</h2>
+                </header>
+                <footer class="image-info">
+                    <h2 class="image-title2">${arts[i].textoFooter}</h2>
+                    <p class="image-description">ლ${arts[i].textoPrecio}</p>
+                </footer>
+        </a>
+        </article>`
+    }
+}
+
 const busqueda = document.getElementById('busqueda');
+const  busquedaYPrecio=document.getElementById('busqueda-y-precio');
+busqueda.addEventListener('keydown', (e) => {
+    if (e.keyCode==13){
+        e.preventDefault();
+        if (busqueda.value.length!=0){
+            dibujar(articulos);
+        }
+    }
+})
 busqueda.addEventListener('input', () => {
+    console.log(busqueda.value);
+    console.log(busqueda.value.length);
+    dibujar([]);
     let cuadro = document.getElementsByClassName('caja-busqueda');
     cuadro[0].classList.toggle('visible', busqueda.value.length != 0)
     cuadro[0].classList.toggle('para-caja', busqueda.value.length != 0)
-})
-busqueda.addEventListener('keyup', (e) => {
-    e.preventDefault();
-    if (e.key==13){
-        console.log('a') ///TODO
-    }
+    
 })
 
 function sleep(ms) {
