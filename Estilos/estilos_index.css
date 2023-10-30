@@ -456,7 +456,7 @@ footer a {
 
     #nav {
         align-self: flex-start;
-
+        margin-top: 5px;
     }
 
 
@@ -518,7 +518,6 @@ footer a {
     nav.para-hamburguesa {
         height: 35vw;
         width: 70vw;
-
         border-radius: 20px;
         display: flex;
         flex-direction: column;
