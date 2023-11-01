@@ -461,6 +461,7 @@ footer a {
     }
 
 
+
     #busqueda {
         height: 8vw;
     }
@@ -559,4 +560,24 @@ footer a {
     -ms-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
+}
+
+#box {
+    box-sizing: border-box;
+}
+
+.visible.para-caja.con-prods {
+
+    animation: con_prods 0.2s forwards;
+    -webkit-animation: con_prods 0.2s forwards;
+}
+
+@keyframes con_prods {
+    from {
+        min-height: 0;
+    }
+
+    to {
+        min-height: 578px;
+    }
 }

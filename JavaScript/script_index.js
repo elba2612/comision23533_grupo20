@@ -42,12 +42,15 @@ busqueda.addEventListener('keydown', (e) => {
     if (e.keyCode == 13) {
         e.preventDefault();
         if (busqueda.value.length != 0) {
-            dibujar(articulos);
+            let box=document.getElementById('box');
+            box.classList.add('con-prods');
+            sleep(300).then(() => { dibujar(articulos); })
         }
     }
 })
 busqueda.addEventListener('input', () => {
     dibujar([]);
+    document.getElementById('box').classList.remove('con-prods');
     let cuadro = document.getElementsByClassName('caja-busqueda');
     cuadro[0].classList.toggle('visible', busqueda.value.length != 0)
     cuadro[0].classList.toggle('para-caja', busqueda.value.length != 0)
@@ -58,13 +61,7 @@ function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-document.getElementById('menu-hamburguesa').addEventListener('click', () => {
 
-
-
-
-
-})
 
 document.body.addEventListener('click', function (e) {
     if (!wide.matches) {
