@@ -107,7 +107,7 @@ var requestOptions = {
     headers: myHeaders,
     redirect: 'follow'
 };
-let apiFuncionando = true;
+let apiFuncionando = false;
 let precioOro = 1651.651;
 let precioDolar=precioOro/10000;
 let precioArs=precioDolar*1000;
