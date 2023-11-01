@@ -66,6 +66,8 @@ header.producto {
 
     transition: transform 0.2s;
     -webkit-animation: out 0.2s forwards;
+    -moz-animation: out 0.2s forwards;
+    -o-animation: out 0.2s forwards;
     animation: out 0.2s forwards;
 }
 
@@ -73,6 +75,8 @@ header.producto {
     transform: scale(1.03);
     transition: transform 0.2s;
     -webkit-animation: in 0.2s forwards;
+    -moz-animation: in 0.2s forwards;
+    -o-animation: in 0.2s forwards;
     animation: in 0.2s forwards;
 }
 
@@ -567,9 +571,10 @@ footer a {
 }
 
 .visible.para-caja.con-prods {
-
-    animation: con_prods 0.2s forwards;
     -webkit-animation: con_prods 0.2s forwards;
+    -moz-animation: con_prods 0.2s forwards;
+    -o-animation: con_prods 0.2s forwards;
+    animation: con_prods 0.2s forwards;
 }
 
 @keyframes con_prods {
